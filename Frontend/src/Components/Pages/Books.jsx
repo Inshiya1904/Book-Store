@@ -7,7 +7,7 @@ function Books() {
 
   useEffect( () => {
     const fetchAllBooks = async () => {
-      await axios.get("http://localhost:3000/getbooks")
+      await axios.get("https://book-store-eg14.onrender.com/getbooks")
       .then((res) =>{
         // console.log(res.data.books);
         setData(res.data.data);
