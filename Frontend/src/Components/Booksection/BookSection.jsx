@@ -11,7 +11,7 @@ function BookSection({ data }) {
 
     const removeBook = async(id) => {
       console.log(id)
-      const response = await axios.delete(`http://localhost:3000/deleteBook/${id}`)
+      const response = await axios.delete(`https://book-store-eg14.onrender.com/deleteBook/${id}`)
       if (response.data.success)
       {
         alert("Book Deleted Successfully")
