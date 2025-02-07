@@ -25,7 +25,7 @@ function AddBooks() {
    }
     const submit = async(e) => {
       e.preventDefault();
-        await axios.post('http://localhost:3000/add',Data).then( (res) => {
+        await axios.post('https://book-store-eg14.onrender.com/add',Data).then( (res) => {
          console.log(res)
             alert(res.data.message)
              navigate('/books');
