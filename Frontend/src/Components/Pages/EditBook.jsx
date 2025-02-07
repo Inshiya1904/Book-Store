@@ -15,7 +15,7 @@ const EditBook = () => {
 
    const { id } = useParams();
     const fetchSingleBookItem = async () => {
-        const response = await axios.get(`http://localhost:3000/getbooks/${id}`)
+        const response = await axios.get(`https://book-store-eg14.onrender.com/getbooks/${id}`)
        console.log(response.data)
        setData(response.data.data)
       
@@ -31,7 +31,7 @@ const EditBook = () => {
    }
     const submit = async(e) => {
       e.preventDefault();
-        await axios.put(`http://localhost:3000/updateBook/${id}`,Data).then( (res) => {
+        await axios.put(`https://book-store-eg14.onrender.com/updateBook/${id}`,Data).then( (res) => {
          console.log(res)
             alert(res.data.message)
              navigate('/books');
