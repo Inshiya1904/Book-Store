@@ -17,6 +17,9 @@ app.put('/updateBook/:id',bookRoute)
 
 app.delete('/deleteBook/:id',bookRoute)
 
+app.get('/',(req,res)=>{
+    res.send('hello')
+})
 app.listen(process.env.PORT,()=>{
     console.log(`Server is running at port ${process.env.PORT}`)
 })
